@@ -10,7 +10,7 @@
       },
       {
         "title": "Panel queue",
-        "sql": "select * from v_panel order by job"
+        "sql": "select code,job,name,status,scored_factors,submitted_at::date as submitted_on from v_panel order by job"
       }
     ]
   },
