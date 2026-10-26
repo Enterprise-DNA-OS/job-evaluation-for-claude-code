@@ -1,0 +1,4 @@
+  code       job     name                           author          status     job revision  current revision  scored factors  submitted at              
+  ---------  ------  -----------------------------  --------------  ---------  ------------  ----------------  --------------  --------------------------
+  EV-DEMO-2  OPS-02  Senior operations coordinator  Demo evaluator  submitted  1             1                 4               "2026-10-21T22:19:09.137Z"
+  EV-DEMO-4  SUP-01  Customer support specialist    Demo evaluator  draft      1             1                 1                                         

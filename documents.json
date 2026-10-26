@@ -1,11 +1,63 @@
 [
   {
-    "name": "example",
-    "title": "TODO(author): the first document this industry must produce",
-    "for_each": "select gen_random_uuid() as id, 'Example' as name",
-    "file": "name",
+    "name": "job-profile",
+    "title": "Draft job profile",
+    "for_each": "select id,code from jobs order by code",
+    "file": "code",
     "sections": [
-      { "title": "Details", "sql": "select 'replace me' as item, $1::text as record_id" }
+      {
+        "title": "Role and purpose",
+        "layout": "record",
+        "sql": "select code,name,family,unit,career,purpose,responsibilities,owner,review_due,revision from jobs where id=$1"
+      },
+      {
+        "title": "Grading position",
+        "sql": "select source_grade,evaluation,status,evaluated_grade,current_grade from v_register where id=$1",
+        "note": "Source grades remain separate from local grades. A blank current grade means review is needed."
+      },
+      {
+        "title": "Evidence gaps",
+        "sql": "select rule,finding,source from v_compliance where job_id=$1"
+      }
+    ]
+  },
+  {
+    "name": "panel-record",
+    "title": "Evaluation panel record",
+    "for_each": "select id,code from evaluations order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Decision",
+        "layout": "record",
+        "sql": "select code,author,status,total,grade,reviewer,review_note,bias_evidence,decided_at,job_revision from evaluations where id=$1"
+      },
+      {
+        "title": "Factor evidence",
+        "sql": "select factor,level,rationale,evidence from scores where evaluation_id=$1 order by factor"
+      },
+      {
+        "title": "Job basis at evaluation",
+        "layout": "record",
+        "sql": "select job_snapshot->>'name' as job,job_snapshot->>'purpose' as purpose,job_snapshot->>'responsibilities' as responsibilities,framework_snapshot->>'version' as method_version from evaluations where id=$1"
+      }
+    ]
+  },
+  {
+    "name": "appeal-record",
+    "title": "Grading appeal record",
+    "for_each": "select id,code from appeals order by code",
+    "file": "code",
+    "sections": [
+      {
+        "title": "Appeal and outcome",
+        "layout": "record",
+        "sql": "select code,name,owner,due,status,outcome,evidence,resolved_by from appeals where id=$1"
+      },
+      {
+        "title": "Evaluation under review",
+        "sql": "select e.code,e.grade,e.author,e.reviewer,e.review_note from appeals a join evaluations e on e.id=a.evaluation_id where a.id=$1"
+      }
     ]
   }
 ]

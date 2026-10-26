@@ -1,0 +1,7 @@
+  code    name                           owner  review due  source grade  current grade  evaluation  status   
+  ------  -----------------------------  -----  ----------  ------------  -------------  ----------  ---------
+  FIN-01  Finance analyst                       2026-11-16                                                    
+  LAB-01  Laboratory technician          Ari    2026-11-09                               EV-DEMO-3   approved 
+  OPS-01  Operations coordinator         Mara   2026-11-25                E2             EV-DEMO-1   approved 
+  OPS-02  Senior operations coordinator  Tane   2026-10-18                               EV-DEMO-2   submitted
+  SUP-01  Customer support specialist    Leah   2026-10-23                               EV-DEMO-4   draft    

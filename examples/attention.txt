@@ -1,0 +1,14 @@
+  job     rule            finding                                                  
+  ------  --------------  ---------------------------------------------------------
+  FIN-01  NO_EVALUATION   No local evaluation recorded                             
+  FIN-01  OWNER           Assign a review owner                                    
+  FIN-01  PROFILE         Job purpose and duties need evidence                     
+  LAB-01  APPEAL_OVERDUE  AP-DEMO-1: Review sample-handling responsibility evidence
+  LAB-01  OPEN_APPEAL     AP-DEMO-1: Review sample-handling responsibility evidence
+  OPS-02  PANEL_REVIEW    Independent panel decision is outstanding                
+  OPS-02  REVIEW_DUE      Profile review is overdue                                
+  SUP-01  MISSING_FACTOR  Evidence missing for effort                              
+  SUP-01  MISSING_FACTOR  Evidence missing for conditions                          
+  SUP-01  PANEL_REVIEW    Independent panel decision is outstanding                
+  SUP-01  REVIEW_DUE      Profile review is overdue                                
+  SUP-01  MISSING_FACTOR  Evidence missing for responsibility                      

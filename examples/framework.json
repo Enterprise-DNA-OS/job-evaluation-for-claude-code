@@ -1,0 +1,76 @@
+{
+  "version": "1",
+  "note": "Illustrative house method. Assess jobs, not people. Validate with a competent evaluator before use. This is not the gradar method.",
+  "factors": [
+    {
+      "code": "skills",
+      "name": "Skills and knowledge",
+      "weight": 1,
+      "levels": [
+        "Follow documented steps with guidance",
+        "Apply established practices independently",
+        "Resolve unfamiliar problems using specialist knowledge",
+        "Design methods across several disciplines",
+        "Set organisation-wide professional direction"
+      ]
+    },
+    {
+      "code": "effort",
+      "name": "Mental, physical and emotional effort",
+      "weight": 1,
+      "levels": [
+        "Predictable demands with regular recovery",
+        "Repeated concentration or physical effort",
+        "Sustained attention or emotional demands",
+        "Frequent intense demands requiring recovery planning",
+        "Sustained complex demands with exceptional recovery needs"
+      ]
+    },
+    {
+      "code": "responsibility",
+      "name": "Responsibility and impact",
+      "weight": 1,
+      "levels": [
+        "Accountable for own routine outputs",
+        "Accountable for a complete service or process",
+        "Accountable for significant resources or service outcomes",
+        "Accountable for outcomes across several functions",
+        "Accountable for organisation-wide outcomes"
+      ]
+    },
+    {
+      "code": "conditions",
+      "name": "Working conditions",
+      "weight": 1,
+      "levels": [
+        "Controlled conditions with ordinary demands",
+        "Occasional difficult environmental or interpersonal conditions",
+        "Regular difficult conditions requiring controls",
+        "Frequent demanding conditions requiring substantial controls",
+        "Persistent demanding conditions requiring extensive controls"
+      ]
+    }
+  ],
+  "grades": [
+    {
+      "code": "E1",
+      "min": 4,
+      "max": 7
+    },
+    {
+      "code": "E2",
+      "min": 8,
+      "max": 11
+    },
+    {
+      "code": "E3",
+      "min": 12,
+      "max": 15
+    },
+    {
+      "code": "E4",
+      "min": 16,
+      "max": 20
+    }
+  ]
+}

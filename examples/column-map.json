@@ -1,0 +1,9 @@
+{
+  "code": "Role ID",
+  "name": "Role name",
+  "family": "Family",
+  "unit": "Business unit",
+  "career": "Career path",
+  "source_grade": "Historic grade",
+  "source_status": "Historic status"
+}

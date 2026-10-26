@@ -1,13 +1,41 @@
 [
   {
     "name": "week",
-    "title": "This week",
-    "subtitle": "Job Evaluation for Claude Code: what needs attention, rendered by npm run view",
+    "title": "Job evaluation week",
+    "subtitle": "Current grades require an unchanged profile and no open appeal.",
     "sections": [
       {
-        "title": "Needs attention",
-        "note": "TODO(author): point this at the industry's attention view (overdue, stuck, quiet).",
-        "sql": "select 'replace me' as item, 'TODO(author)' as why"
+        "title": "Job register",
+        "sql": "select code,name,owner,review_due,source_grade,current_grade,status from v_register order by code"
+      },
+      {
+        "title": "Panel queue",
+        "sql": "select * from v_panel order by job"
+      }
+    ]
+  },
+  {
+    "name": "attention",
+    "title": "Evidence and review gaps",
+    "sections": [
+      {
+        "title": "Actions needing attention",
+        "sql": "select * from v_attention order by job,rule"
+      }
+    ]
+  },
+  {
+    "name": "calibration",
+    "title": "Cross-role calibration",
+    "subtitle": "Illustrative grades are not a finding of equal value or equal pay.",
+    "sections": [
+      {
+        "title": "Current grades by family and unit",
+        "sql": "select * from v_calibration order by family,unit,grade"
+      },
+      {
+        "title": "Evidence checks",
+        "sql": "select * from v_compliance order by job,rule"
       }
     ]
   }
